@@ -15,7 +15,7 @@ document.querySelector('#search').onclick=() =>{
 var swiper = new Swiper(".product-row", {
     spaceBetween: 30,
     loop:true,
-    centeredSlides:true,
+    centeredSlides:false,
     autoplay:{
         delay:9500,
         disableOnInteraction:false,
@@ -39,7 +39,7 @@ var swiper = new Swiper(".product-row", {
 var swiper = new Swiper(".blogs-row", {
     spaceBetween: 30,
     loop:true,
-    centeredSlides:true,
+    centeredSlides:false,
     autoplay:{
         delay:9500,
         disableOnInteraction:false,
@@ -68,7 +68,7 @@ var swiper = new Swiper(".blogs-row", {
   var swiper = new Swiper(".review-row", {
     spaceBetween: 30,
     loop:true,
-    centeredSlides:true,
+    centeredSlides:false,
     autoplay:{
         delay:9500,
         disableOnInteraction:false,
