@@ -1,91 +1,106 @@
+let navbar = document.querySelector(".navbar");
+document.querySelector("#menu-bar").onclick = () => {
+  navbar.classList.toggle("active");
+};
 
-let navbar = document.querySelector('.navbar');
-document.querySelector('#menu-bar').onclick=() =>{
-    navbar.classList.toggle('active');
-}
-
-
-
-let search = document.querySelector('.search');
-document.querySelector('#search').onclick=() =>{
-    search.classList.toggle('active');
-}
-
+let search = document.querySelector(".search");
+document.querySelector("#search").onclick = () => {
+  search.classList.toggle("active");
+};
 
 var swiper = new Swiper(".product-row", {
-    spaceBetween: 30,
-    // loop:true,
-    // centeredSlides:false,
-    autoplay:{
-        delay:9500,
-        disableOnInteraction:false,
+  spaceBetween: 30,
+  // loop:true,
+  // centeredSlides:false,
+  autoplay: {
+    delay: 9500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
     },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+    768: {
+      slidesPerView: 2,
     },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
+    1024: {
+      slidesPerView: 3,
     },
-  });
+  },
+});
 var swiper = new Swiper(".blogs-row", {
-    spaceBetween: 30,
-    loop:true,
-    centeredSlides:false,
-    autoplay:{
-        delay:9500,
-        disableOnInteraction:false,
+  spaceBetween: 30,
+  loop: true,
+  centeredSlides: false,
+  autoplay: {
+    delay: 9500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextE1: ".swiper-button-next",
+    prevE1: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
     },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+    768: {
+      slidesPerView: 1,
     },
-    navigation:{
-        nextE1 :".swiper-button-next",
-        prevE1 :".swiper-button-prev",
+    1024: {
+      slidesPerView: 1,
     },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 1,
-      },
-      1024: {
-        slidesPerView: 1,
-      },
-    },
-  });
+  },
+});
 
-  var swiper = new Swiper(".review-row", {
-    spaceBetween: 30,
-    // loop:true,
-    // centeredSlides:false,
-    autoplay:{
-        delay:9500,
-        disableOnInteraction:false,
+var swiper = new Swiper(".review-row", {
+  spaceBetween: 30,
+  // loop:true,
+  // centeredSlides:false,
+  autoplay: {
+    delay: 9500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
     },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+    768: {
+      slidesPerView: 2,
     },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
+    1024: {
+      slidesPerView: 3,
     },
-  });
+  },
+});
+
+/* ProductJS */
+
+// init Isotope
+var $grid = $("#product-list").isotope({
+  // options
+});
+
+// filter items on button click
+$(".filter-button-group").on("click", "button", function () {
+  var filterValue = $(this).attr("data-filter");
+  $grid.isotope({ filter: filterValue });
+});
+/* end Product */
+
+
+/* inner Header */ 
+  
+/* end Inner */
