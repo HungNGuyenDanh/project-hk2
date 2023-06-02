@@ -22,6 +22,8 @@ function showFilteredContent(btn){
         }
     });
 }
+// console.log(showFilteredContent + "used");
+
 
 function resetActiveBtn(){
     allFilterBtns.forEach((btn) => {
