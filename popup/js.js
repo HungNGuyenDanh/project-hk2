@@ -1,10 +1,11 @@
-let preveiwContainer = document.querySelector('.products-preview');
-let previewBox = preveiwContainer.querySelectorAll('.preview');
+const preveiwContainer = document.querySelector('.products-preview');
+const previewBox = preveiwContainer.querySelectorAll('.preview');
 
-document.querySelectorAll('.products-container .product').forEach(product =>{
+document.querySelectorAll('.filter-items .filter-item').forEach(product =>{
   product.onclick = () =>{
     preveiwContainer.style.display = 'flex';
     let name = product.getAttribute('data-name');
+    console.log(name);
     previewBox.forEach(preview =>{
       let target = preview.getAttribute('data-target');
       if(name == target){

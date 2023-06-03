@@ -821,38 +821,38 @@ section {
 
 /* order */
 
-/* footer */
+/*#footer */
 
-.footer {
+#footer {
   background: var(--bg);
   text-align: center;
 }
 
-.footer .box-container {
+#footer .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 2rem;
 }
 
-.footer .box-container .box h3 {
+#footer .box-container .box h3 {
   text-transform: capitalize;
   font-size: 2.2rem;
   color: var(--secondary);
   padding: 1rem 0;
 }
 
-.footer .box-container .box p {
+#footer .box-container .box p {
   font-size: 1.5rem;
   line-height: 2;
   color: #444;
   padding: 0.5rem 0;
 }
 
-.footer .box-container .box .share {
+#footer .box-container .box .share {
   margin-top: 1rem;
 }
 
-.footer .box-container .box .share a {
+#footer .box-container .box .share a {
   height: 4.5rem;
   width: 4.5rem;
   line-height: 4.5rem;
@@ -863,11 +863,11 @@ section {
   margin-right: 0.3rem;
 }
 
-.footer .box-container .box .share a:hover {
+#footer .box-container .box .share a:hover {
   background: var(--secondary);
 }
 
-.footer .box-container .box .link {
+#footer .box-container .box .link {
   font-size: 1.7rem;
   line-height: 2;
   color: var(--primary-color);
@@ -875,12 +875,12 @@ section {
   display: block;
 }
 
-.footer .box-container .box .link:hover {
+#footer .box-container .box .link:hover {
   color: var(--secondary);
   text-decoration: underline;
 }
 
-.footer .credit {
+#footer .credit {
   text-align: center;
   margin-top: 3rem;
   padding-top: 3rem;
@@ -890,11 +890,11 @@ section {
   border-top: 0.1rem solid var(--secondary);
 }
 
-.footer .credit span {
+#footer .credit span {
   color: var(--secondary);
 }
 
-/* footer */
+/*#footer */
 
 /* media queries */
 /* @media screen (max-width: 1010px) {
