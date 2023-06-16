@@ -1,21 +1,21 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-const header = $('#header');
-const footer = $('#footer');
+const header = $("#header");
+const footer = $("#footer");
 
 const app = {
-    render: function () {
-        const headerHtml = `
+  render: function () {
+    const headerHtml = `
             <header class="header">
 
-                <a href="#" class="logo"> <i class="fas fa-bread-slice"></i> bakery </a>
+                <a href="./index.html" class="logo"> <i class="fas fa-bread-slice"></i> bakery </a>
 
                 <nav class="navbar">
                     <a href="./index.html">home</a>
                     <a href="./about.html">about</a>
                     <a href="./product.html">product</a>
-                    <a href="#order">order</a>
+                    <a href="./order.html">Check Out</a>
                 </nav>
 
                 <div class="icons">
@@ -59,9 +59,9 @@ const app = {
             <a href="#" class="btn"> checkout </a>
 
         </div>`;
-        header.innerHTML = headerHtml;
+    header.innerHTML = headerHtml;
 
-        const footerHtml = `
+    const footerHtml = `
             <div class="box-container">
 
                 <div class="box">
@@ -95,48 +95,44 @@ const app = {
                     <p>Monday - Friday: 9:00 - 23:00 <br> Saturday: 8:00 - 24:00 </p>
                 </div>
 
-            </div>
+            </div>`;
+    footer.innerHTML = footerHtml;
+  },
 
-            <div class="credit">created by <span>ninjashub</span> all rights reserved! </div>`;
-        footer.innerHTML = footerHtml;
+  handleClick: function () {
+    const cart = $(".cart-items-container");
+    const menu = $("#menu-btn");
+    const navbar = $(".header .navbar");
 
-    },
+    menu.onclick = () => {
+      menu.classList.toggle("fa-times");
+      navbar.classList.toggle("active");
+    };
 
-    handleClick: function () {
-        const cart = $('.cart-items-container');
-        const menu = $('#menu-btn');
-        const navbar = $('.header .navbar');
+    $("#cart-btn").onclick = () => {
+      cart.classList.add("active");
+    };
 
+    $("#close-form").onclick = () => {
+      cart.classList.remove("active");
+    };
 
-        menu.onclick = () => {
-            menu.classList.toggle('fa-times');
-            navbar.classList.toggle('active');
-        }
+    var swiper = new Swiper(".home-slider", {
+      grabCursor: true,
+      loop: true,
+      cnteredSlides: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  },
 
-        $('#cart-btn').onclick = () => {
-            cart.classList.add('active');
-        }
+  start: function () {
+    this.render();
 
-        $('#close-form').onclick = () => {
-            cart.classList.remove('active');
-        }
-
-        var swiper = new Swiper(".home-slider", {
-            grabCursor: true,
-            loop: true,
-            cnteredSlides: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    },
-
-    start: function () {
-        this.render();
-
-        this.handleClick();
-    }
-}
+    this.handleClick();
+  },
+};
 
 app.start();
