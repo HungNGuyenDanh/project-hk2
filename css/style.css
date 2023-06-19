@@ -346,14 +346,15 @@ section {
 
 /*about us page*/
 #wrapper1 {
-  top: 45px;
+  
 }
 .wrapper {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* top: 55px; */
+  /* padding-top: 50px; */
+  background-color: white;
 }
 .background-container {
   width: 100%;
@@ -369,15 +370,15 @@ section {
   /* background-color: rgb(163, 236, 240); */
 }
 .about-container {
-  width: 85%;
-  min-height: 80vh;
+  width: 80%;
+  min-height: 75vh;
   position: absolute;
   background-color: #783b3194;
-  box-shadow: 24px 24px 30px #6d8dad96;
+  /* box-shadow: 24px 24px 30px #6d8dad96; */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 40px;
+  padding: 10px 20px;
   border-radius: 5px;
 }
 .image-container {
@@ -387,9 +388,9 @@ section {
   align-items: center;
 }
 .image-container img {
-  width: 500px;
+  /* width: 500px; */
   height: 500px;
-  margin: 20px;
+  margin: 10px;
   border-radius: 10px;
 }
 .text-container {
@@ -398,14 +399,14 @@ section {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  font-size: 22px;
+  font-size: 20px;
 }
 #text-left {
   justify-content: center;
   align-items: flex-end;
 }
 .text-container h1 {
-  font-size: 70px;
+  font-size: 50px;
   padding: 20px 0px;
 }
 .text-container a {
