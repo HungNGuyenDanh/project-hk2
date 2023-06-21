@@ -141,7 +141,7 @@
             bottom: -50px;
             width: 50px;
             height: 50px;
-            background-color: transparent;
+            background-color: red;
             border-radius: 50%;
             box-shadow: 35px -35px 0 10px var(--white);
             pointer-events: none;

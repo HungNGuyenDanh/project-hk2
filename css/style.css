@@ -346,7 +346,6 @@ section {
 
 /*about us page*/
 #wrapper1 {
-  
 }
 .wrapper {
   position: relative;
@@ -489,7 +488,6 @@ section {
 }
 
 /* product page */
-
 
 /* end */
 
@@ -940,6 +938,21 @@ section {
   }
   #wrapper1 {
     top: 0;
+  }
+  .product .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 2rem;
+  }
+  .gallery .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+  }
+  .parallax .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
   }
 }
 
