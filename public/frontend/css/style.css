@@ -1410,6 +1410,19 @@ footer ul li a:hover {
 .card-shop .name .address-shop {
   font-size: 14px;
 }
+
+
+.owl-carousel > div {
+}
+
+.owl-carousel > div > img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+
 /* line 24, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_home.scss */
 /* line 25, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_home.scss */
 /* line 26, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_home.scss */
@@ -1662,9 +1675,15 @@ footer ul li a:hover {
   top: 0px;
   z-index: 100;
 }
+.banner-pic{
+  display: flex;
+}
+.banner-pic > div > image {
+  width: 250px;
+}
 /* line 1, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_slideshow.scss */
 .main-carousel {
-  max-height: 100vh;
+  max-height: 70vh;
   overflow: hidden;
   position: relative;
 }
@@ -1717,6 +1736,9 @@ footer ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.owl-carousel .owl-item img{
+  max-height: 23rem;
 }
 /* line 54, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_slideshow.scss */
 /* line 55, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_slideshow.scss */
