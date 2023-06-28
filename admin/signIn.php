@@ -1,200 +1,146 @@
-<!DOCTYPE html>
-<!-- Created By CodingNepal -->
-<html lang="en" dir="ltr">
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form Design | CodeLab</title>
+    <title>Login Page</title>
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
-
-        * {
+        *{
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: "Vidaloka", sans-serif;
+            font-family:'poppins',sans-serif;
         }
-
-        html,
-        body {
-            display: grid;
-            height: 100%;
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
             width: 100%;
-            place-items: center;
-            background: #f2f2f2;
-            /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
-        }
-
-        ::selection {
-            background: #4158d0;
-            color: #fff;
-        }
-
-        .wrapper {
-            width: 380px;
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .wrapper .title {
-            font-size: 35px;
-            font-weight: 600;
-            text-align: center;
-            line-height: 100px;
-            color: #fff;
-            user-select: none;
-            border-radius: 15px 15px 0 0;
-            background: linear-gradient(-135deg, #c98d83, #783b31);
-        }
-
-        .wrapper form {
-            padding: 10px 30px 50px 30px;
-        }
-
-        .wrapper form .field {
-            height: 50px;
-            width: 100%;
-            margin-top: 20px;
+            background: url(./images/z4468923591853_8550ce75e46905c47a016890f1aba20d.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+                }
+        .form-box{
             position: relative;
+            width: 400px;
+            height: 450px;
+            background: rgba(240, 248, 255, 0.55);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
-        .wrapper form .field input {
-            height: 100%;
-            width: 100%;
-            outline: none;
-            font-size: 17px;
-            padding-left: 20px;
-            border: 1px solid lightgrey;
-            border-radius: 25px;
-            transition: all 0.3s ease;
+        h2{
+            font-size: 2em;
+            color: black;
+            text-align: center;
         }
-
-        .wrapper form .field input:focus,
-        form .field input:valid {
-            border-color: #4158d0;
+        .inputbox{
+            position: relative;
+            margin: 30px 0;
+            width: 310px;
+            border-bottom: 2px solid black;
         }
-
-        .wrapper form .field label {
+        .inputbox label{
             position: absolute;
             top: 50%;
-            left: 20px;
-            color: #999999;
-            font-weight: 400;
-            font-size: 17px;
+            left: 5px;
+            transform: translateY(-50%);
+            color:black;
+            font-size: 1em;
             pointer-events: none;
-            transform: translateY(-50%);
-            transition: all 0.3s ease;
+            transition: .5s;
         }
-
-        form .field input:focus~label,
-        form .field input:valid~label {
-            top: 0%;
-            font-size: 16px;
-            color: #4158d0;
-            background: #fff;
-            transform: translateY(-50%);
+        input:focus ~ label,
+        input:valid ~ label {
+            top: -5px;
         }
-
-        form .content {
-            display: flex;
+        .inputbox input{
             width: 100%;
             height: 50px;
-            font-size: 16px;
-            align-items: center;
-            justify-content: space-around;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            padding: 0 35px 0 5px;
+            color: black;
         }
-
-        form .content .checkbox {
+        .forget{
+            margin: -15px 0 15px;
+            font-size: .9em;
+            color: #fff;
             display: flex;
-            align-items: center;
             justify-content: center;
         }
-
-        form .content input {
-            width: 15px;
-            height: 15px;
-            background: red;
+        .forget label input{
+            margin-right: 3px;
         }
-
-        form .content label {
-            color: #262626;
-            user-select: none;
-            padding-left: 5px;
+        .forget label {
+            color: #000000;
+            margin-right: 20px;
         }
-
-        form .content .pass-link {
-            color: "";
-        }
-
-        form .field input[type="submit"] {
+        .forget label a{
             color: #fff;
-            border: none;
-            padding-left: 0;
-            margin-top: -10px;
-            font-size: 20px;
-            font-weight: 500;
-            cursor: pointer;
-            background: linear-gradient(-135deg, #783b31, #c98d83);
-            transition: all 0.3s ease;
-        }
-
-        form .field input[type="submit"]:active {
-            transform: scale(0.95);
-        }
-
-        form .signup-link {
-            color: #262626;
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        form .pass-link a,
-        form .signup-link a {
-            color: #4158d0;
             text-decoration: none;
         }
-
-        form .pass-link a:hover,
-        form .signup-link a:hover {
+        .forget label a:hover{
             text-decoration: underline;
         }
+        button{
+            width: 100%;
+            height: 40px;
+            border-radius: 40px;
+            background: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+        }
+        .register{
+            font-size: .9em;
+            color: #000000;
+            margin: 25px 0 10px;
+            text-align: center;
+
+        }
+        .register p a {
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .register p a:hover{
+            text-decoration: underline;
+        }
+
     </style>
 </head>
-
 <body>
-    <div class="wrapper">
-        <div class="title">
-            Sign Up
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="">
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <input type="text" required>
+                        <label for="">Your Email : </label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="password" required>
+                        <label for=""> Your Password : </label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox"> Remember me </label>
+                        <a href="">Forget Password</a>
+                    </div>
+                    <button>Log In</button>
+                    <div class="register">
+                        <p>Don't have a account? <a href="signIn.html">Sign In</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
-        <form action="#">
-            <div class="field">
-                <input type="text" required>
-                <label>Username</label>
-            </div>
-            <div class="field">
-                <input type="text" required>
-                <label>Email Address</label>
-            </div>
-            <div class="field">
-                <input type="password" required>
-                <label>Password</label>
-            </div>
-            <div class="field">
-                <input type="password" required>
-                <label>Repeat Password</label>
-            </div>
-            <div class="field">
-                <input type="checkbox" required style="width: 27px; margin-left: 5px; position: relative;">
-                <p  style="position: absolute; left: 44px; top: 18px;">I agree</p>
-            </div>
-            <div class="field" style="margin-top: 40px;">
-                <input type="submit" value="Sign Up">
-            </div>
-        </form>
-    </div>
+    </section>
 </body>
-
 </html>

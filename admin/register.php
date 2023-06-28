@@ -121,7 +121,7 @@
         <div class="form-box">
             <div class="form-value">
                 <form action="">
-                    <h2>SigIn</h2>
+                    <h2>Register Form</h2>
                     <div class="inputbox">
                         <input type="text" required>
                         <label for="">Your Email : </label>
@@ -130,14 +130,11 @@
                         <input type="password" required>
                         <label for=""> Your Password : </label>
                     </div>
-                    <div class="forget">
-                        <label for=""><input type="checkbox"> Remember me </label>
-                        <a href="">Forget Password</a>
-                    </div>
-                    <button>Log In</button>
-                    <div class="register">
-                        <p>Don't have a account? <a href="signIn.html">Sign In</a></p>
-                    </div>
+                    <div class="inputbox">
+                        <input type="password" required>
+                        <label for="">Repeat Your Password : </label>
+                    </div>                    
+                    <button>Sign Up</button>
                 </form>
             </div>
         </div>
