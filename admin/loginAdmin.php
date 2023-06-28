@@ -1,103 +1,193 @@
-<?php
-$username = $password = "";
-$error = "";
-
-if (isset($_POST['submit'])) {
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-
-  if (empty($username) || empty($password)) {
-    $error = "Do not blank username or password";
-  }
-}
-?>
-
 <!DOCTYPE html>
-<html lang="en">
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Login Panel</title>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Design | CodeLab</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
 
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      font-family: "Vidaloka", sans-serif;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Vidaloka", sans-serif;
+        }
 
-    body {
-      background-color: #c98d83;
-    }
+        html,
+        body {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            place-items: center;
+            background: #f2f2f2;
+            /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
+        }
 
-    div.container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      background-color: #783b31;
-      padding: 30px;
-      box-shadow: 0 50px 50px -50px darkslategray;
-      border-radius: 10px;
-    }
+        ::selection {
+            background: #4158d0;
+            color: #fff;
+        }
 
-    div.container div.myform {
-      width: 270px;
-      margin-right: 30px;
-    }
+        .wrapper {
+            width: 380px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+        }
 
-    div.container div.myform h2 {
-      color: #1c1c1e;
-      margin-bottom: 20px;
-    }
+        .wrapper .title {
+            font-size: 35px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            user-select: none;
+            border-radius: 15px 15px 0 0;
+            background: linear-gradient(-135deg, #c98d83, #783b31);
+        }
 
-    div.container div.myform input {
-      border: none;
-      outline: none;
-      border-radius: 0;
-      width: 100%;
-      border-bottom: 2px solid #1c1c1e;
-      margin-bottom: 25px;
-      padding: 7px 0;
-      font-size: 14px;
-    }
+        .wrapper form {
+            padding: 10px 30px 50px 30px;
+        }
 
-    div.container div.myform button {
-      color: white;
-      background-color: #1c1c1e;
-      border: none;
-      outline: none;
-      border-radius: 2px;
-      font-size: 14px;
-      padding: 5px 12px;
-      font-weight: 500;
-    }
+        .wrapper form .field {
+            height: 50px;
+            width: 100%;
+            margin-top: 20px;
+            position: relative;
+        }
 
-    div.container div.image img {
-      width: 300px;
-    }
-  </style>
+        .wrapper form .field input {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            font-size: 17px;
+            padding-left: 20px;
+            border: 1px solid lightgrey;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .wrapper form .field input:focus,
+        form .field input:valid {
+            border-color: #4158d0;
+        }
+
+        .wrapper form .field label {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            color: #999999;
+            font-weight: 400;
+            font-size: 17px;
+            pointer-events: none;
+            transform: translateY(-50%);
+            transition: all 0.3s ease;
+        }
+
+        form .field input:focus~label,
+        form .field input:valid~label {
+            top: 0%;
+            font-size: 16px;
+            color: #4158d0;
+            background: #fff;
+            transform: translateY(-50%);
+        }
+
+        form .content {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            font-size: 16px;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        form .content .checkbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form .content input {
+            width: 15px;
+            height: 15px;
+            background: red;
+        }
+
+        form .content label {
+            color: #262626;
+            user-select: none;
+            padding-left: 5px;
+        }
+
+        form .content .pass-link {
+            color: "";
+        }
+
+        form .field input[type="submit"] {
+            color: #fff;
+            border: none;
+            padding-left: 0;
+            margin-top: -10px;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            background: linear-gradient(-135deg, #783b31, #c98d83);
+            transition: all 0.3s ease;
+        }
+
+        form .field input[type="submit"]:active {
+            transform: scale(0.95);
+        }
+
+        form .signup-link {
+            color: #262626;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        form .pass-link a,
+        form .signup-link a {
+            color: #4158d0;
+            text-decoration: none;
+        }
+
+        form .pass-link a:hover,
+        form .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="myform">
-      <form method="post">
-        <h2>ADMIN LOGIN</h2>
-        <input type="text" placeholder="Admin Name" name="username" style="border-radius: 5px;">
-        <input type="password" placeholder="Password" name="password" style="border-radius: 5px;">
-        <input type="submit" name="submit" style="border-radius: 5px;">
-      </form>
-      <span style="padding-top: 50px; color: red;"><?php echo $error ?></span>
+    <div class="wrapper">
+        <div class="title">
+            Admin Login
+        </div>
+        <form action="#">
+            <div class="field">
+                <input type="text" required>
+                <label>Email Address</label>
+            </div>
+            <div class="field">
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="content">
+                <div class="pass-link">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+            <div class="field">
+                <input type="submit" value="Login">
+            </div>
+        </form>
     </div>
-  </div>
 </body>
 
 </html>
