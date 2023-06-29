@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Sign In Page</title>
     <style>
         *{
             margin: 0;
@@ -24,7 +24,7 @@
         .form-box{
             position: relative;
             width: 400px;
-            height: 450px;
+            height: 630px;
             background: rgba(240, 248, 255, 0.55);
             border-radius: 20px;
             backdrop-filter: blur(15px);
@@ -33,6 +33,7 @@
             align-items: center;
         }
         h2{
+            margin-top: 30px;
             font-size: 2em;
             color: black;
             text-align: center;
@@ -59,12 +60,12 @@
         }
         .inputbox input{
             width: 100%;
-            height: 50px;
+            height: 40px;
             background: transparent;
             border: none;
             outline: none;
             font-size: 1em;
-            padding: 0 35px 0 5px;
+            padding: 0 30px 0 5px;
             color: black;
         }
         .forget{
@@ -102,7 +103,7 @@
         .register{
             font-size: .9em;
             color: #000000;
-            margin: 25px 0 10px;
+            margin: 20px 20px 20px 10px;
             text-align: center;
 
         }
@@ -121,22 +122,37 @@
         <div class="form-box">
             <div class="form-value">
                 <form action="">
-                    <h2>Login</h2>
+                    <h2> Đăng Ký </h2>
                     <div class="inputbox">
                         <input type="text" required>
-                        <label for="">Your Email : </label>
+                        <label for=""> Email : </label>
                     </div>
                     <div class="inputbox">
                         <input type="password" required>
-                        <label for=""> Your Password : </label>
+                        <label for=""> Nhập mật khẩu : </label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="password" required>
+                        <label for=""> Xác nhận mật khẩu : </label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" required>
+                        <label for=""> Nhập tên người dùng : </label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" required>
+                        <label for=""> Nhập số điện thoại : </label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" required>
+                        <label for=""> Địa chỉ : </label>
                     </div>
                     <div class="forget">
-                        <label for=""><input type="checkbox"> Remember me </label>
-                        <a href="">Forget Password</a>
+                        <label for=""><input type="checkbox"> Hiện mật khẩu </label>
                     </div>
-                    <button>Log In</button>
+                    <button> Đăng Ký </button>
                     <div class="register">
-                        <p>Don't have a account? <a href="signIn.html">Sign In</a></p>
+                        <p> Tôi đã có tài khoản  <a href="login.html"> Đăng Nhập </a></p>
                     </div>
                 </form>
             </div>
