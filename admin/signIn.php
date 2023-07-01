@@ -1,17 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In Page</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
-            font-family:'poppins',sans-serif;
+            font-family: 'poppins', sans-serif;
         }
-        section{
+
+        section {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,8 +21,9 @@
             background: url(./images/z4468923591853_8550ce75e46905c47a016890f1aba20d.jpg) no-repeat;
             background-size: cover;
             background-position: center;
-                }
-        .form-box{
+        }
+
+        .form-box {
             position: relative;
             width: 400px;
             height: 630px;
@@ -32,33 +34,38 @@
             justify-content: center;
             align-items: center;
         }
-        h2{
+
+        h2 {
             margin-top: 30px;
             font-size: 2em;
             color: black;
             text-align: center;
         }
-        .inputbox{
+
+        .inputbox {
             position: relative;
             margin: 30px 0;
             width: 310px;
             border-bottom: 2px solid black;
         }
-        .inputbox label{
+
+        .inputbox label {
             position: absolute;
             top: 50%;
             left: 5px;
             transform: translateY(-50%);
-            color:black;
+            color: black;
             font-size: 1em;
             pointer-events: none;
             transition: .5s;
         }
-        input:focus ~ label,
-        input:valid ~ label {
+
+        input:focus~label,
+        input:valid~label {
             top: -5px;
         }
-        .inputbox input{
+
+        .inputbox input {
             width: 100%;
             height: 40px;
             background: transparent;
@@ -68,28 +75,34 @@
             padding: 0 30px 0 5px;
             color: black;
         }
-        .forget{
+
+        .forget {
             margin: -15px 0 15px;
             font-size: .9em;
             color: #fff;
             display: flex;
             justify-content: center;
         }
-        .forget label input{
+
+        .forget label input {
             margin-right: 3px;
         }
+
         .forget label {
             color: #000000;
             margin-right: 20px;
         }
-        .forget label a{
+
+        .forget label a {
             color: #fff;
             text-decoration: none;
         }
-        .forget label a:hover{
+
+        .forget label a:hover {
             text-decoration: underline;
         }
-        button{
+
+        button {
             width: 100%;
             height: 40px;
             border-radius: 40px;
@@ -100,23 +113,26 @@
             font-size: 1em;
             font-weight: 600;
         }
-        .register{
+
+        .register {
             font-size: .9em;
             color: #000000;
             margin: 20px 20px 20px 10px;
             text-align: center;
 
         }
+
         .register p a {
             text-decoration: none;
             font-weight: 600;
         }
-        .register p a:hover{
+
+        .register p a:hover {
             text-decoration: underline;
         }
-
     </style>
 </head>
+
 <body>
     <section>
         <div class="form-box">
@@ -147,16 +163,14 @@
                         <input type="text" required>
                         <label for=""> Địa chỉ : </label>
                     </div>
-                    <div class="forget">
-                        <label for=""><input type="checkbox"> Hiện mật khẩu </label>
-                    </div>
                     <button> Đăng Ký </button>
                     <div class="register">
-                        <p> Tôi đã có tài khoản  <a href="login.html"> Đăng Nhập </a></p>
+                        <p> Tôi đã có tài khoản <a href="login.php"> Đăng Nhập </a></p>
                     </div>
                 </form>
             </div>
         </div>
     </section>
 </body>
+
 </html>
