@@ -32,9 +32,9 @@ $(document).ready(function() {
     // });
 
     // Toggle User Nav
-    // $('.js-toggle-user-nav').click(function() {
-    //     $('.user-nav-header').fadeToggle();
-    // });
+    $('.js-toggle-user-nav').click(function() {
+        $('.user-nav-header').fadeToggle();
+    });
 
     // TOGGLE CART SIDEBAR
     $('.js-toggle-cart-sidebar').click(function() {
@@ -298,7 +298,6 @@ $(document).ready(function() {
         navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>', '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
     });
 });
-
 
 
 

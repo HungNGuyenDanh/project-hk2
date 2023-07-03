@@ -39,329 +39,13 @@
 
 <body>
 
-  <div class="page-wrapper">
-
-    <!-- MESSAGE FROM SERVER -->
-    <div class="msg-top ">
-      <div class="msg-from-server msg-container">
-        <span class="close-msg">&times;</span>
-      </div>
-    </div>
-
-    <div class="fullscreen-overlay"></div>
-
-    <div class="cart-sidebar-container">
-      <div class="header">
-        <p class="title">Giỏ hàng</p><span class="toggle-cart-sidebar js-toggle-cart-sidebar"><i
-            class="fas fa-times fa-2x"></i></span>
-      </div>
-      <div class="body">
-        <ul class="cart-list">
-        </ul>
-      </div>
-      <div class="footer">
-        <div class="total">
-          <span class="text">Tổng tiền</span>
-          <span class="cart-total">Liên hệ</span>
-          <span class="money">
-          </span>
-        </div>
-        <div class="action-btns">
-          <a class="action-btn goto-cart" href="gio-hang">Xem giỏ hàng</a>
-          <a class="action-btn remove-cart js-remove-cart" href="gio-hang/xoa">Xóa giỏ hàng</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="mobile-menu-container">
-      <div class="header">
-        <p class="title">
-          <img src="./public/src/logo/z4456204192158_77525be10b80cd02723e175768e2d1c9.jpg" alt="" srcset="">
-        </p><span class="toggle-mobile-menu js-toggle-mobile-menu"><i class="fas fa-times fa-2x"></i></span>
-      </div>
-      <div class="body">
-
-        <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade pt-3 show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-            <ul class="mobile-menu-list">
-              <li>
-                <a href="">
-                  Trang chủ
-                </a>
-              </li>
-              <li>
-                <a href="./aboutus.html">
-                  Giới thiệu
-                </a>
-              </li>
-              <li>
-                <a href="danh-muc/banh-sinh-nhat">
-                  B&aacute;nh Sinh Nhật
-                </a>
-              </li>
-              <li>
-                <a href="tin-tuc/banh-giang-sinh-banh-noel-2022-giang-sinh-ngot-ngao-9">
-                  B&aacute;nh Noel (HOT)
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Tin v&agrave; Sự Kiện
-                  <i class="dropdown-button js-dropdown-button fas fa-caret-down"></i>
-                </a>
-                <ul class='submenu'>
-                  <li><a href='./huong-dan-mua-hang.html.html'>Hướng dẫn mua hàng</a></li>
-                  <li><a href='./tin-tuc.html'>Tin tức</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="lien-he">
-                  Li&ecirc;n hệ
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="tab-pane fade  pt-3" id="nav-category" role="tabpanel" aria-labelledby="nav-profile-tab">
-            <ul class="mobile-menu-list">
-              <li>
-                <a href="danh-muc/banh-sinh-nhat">
-                  B&aacute;nh sinh nhật
-                  <i class="dropdown-button js-dropdown-button fas fa-caret-down"></i>
-                </a>
-                <ul class='submenu'>
-                  <li><a href='danh-muc/ga-to-kem-tuoi'>Gato kem tươi</a></li>
-                  <li><a href='danh-muc/ga-to-kem-bo'>Gato kem bơ</a></li>
-                  <li><a href='danh-muc/banh-mousse'>Bánh mousse</a></li>
-                  <li><a href='danh-muc/banh-valentine'>Bánh valentine</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="danh-muc/banh-sinh-nhat-cho-be">
-                  B&aacute;nh Sinh Nhật Cho B&eacute;
-                  <i class="dropdown-button js-dropdown-button fas fa-caret-down"></i>
-                </a>
-                <ul class='submenu'>
-                  <li><a href='danh-muc/banh-hinh-so'>Bánh hình số</a></li>
-                  <li><a href='danh-muc/banh-12-con-giap'>Bánh 12 con giáp</a></li>
-                  <li><a href='danh-muc/banh-sang-tao'>Bánh sáng tạo</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="">
-                  Chocolate
-                </a>
-              </li>
-              <li>
-                <a href="danh-muc/cookies-va-mini-cake">
-                  Cookies v&agrave; Mini Cake
-                  <i class="dropdown-button js-dropdown-button fas fa-caret-down"></i>
-                </a>
-                <ul class='submenu'>
-                  <li><a href='danh-muc/macaron'>Macaron</a></li>
-                  <li><a href='danh-muc/cookies'>Cookies</a></li>
-                  <li><a href='danh-muc/choux-pastries'>Choux Pastries</a></li>
-                  <li><a href='danh-muc/banh-mi'>Bánh Mì</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="danh-muc/banh-trung-thu">
-                  B&aacute;nh trung thu
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer">
-        <div class="auth-actions depth1">
-          <a class="auth-action" href="dang-nhap#login">
-            <i class="fas fa-user-circle"></i>
-            <span>Đăng nhập</span>
-          </a>
-          <a class="auth-action" href="dang-ky#register">
-            <i class="fas fa-user-plus"></i>
-            <span>Đăng kí</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <header class="header">
-      <div class="header-top" id="HeaderTop">
-        <div class="container">
-          <span class="sologan float-left">Ch&agrave;o Mừng Qu&yacute; Kh&aacute;ch Đến Với em nhi Bakery</span>
-          <span class="sologan float-right">Hotline: 0999999999 | 0999999999</span>
-        </div>
-      </div>
-      <div class="header-topbar">
-        <div class="container">
-          <div class="header-topbar-inner-container">
-            <div class="left">
-              <div class="logo">
-                <a class="big-logo" href="">
-                  <img src="./public/src/logo/z4456204188452_ddfc353090918214453a5d04758e422c.jpg" alt="" width="180px">
-                </a>
-              </div>
-            </div>
-            <div class="right">
-              <form action="tim-kiem" method="GET" class="form-search-header">
-                <span class="icon">
-                  <i class="fa fa-search"></i>
-                </span>
-                <input type="text" name="search" placeholder="Tìm kiếm" class="form-control">
-              </form>
-              <a class="shopping-bag js-toggle-cart-sidebar" href="#/">
-                <img src="public/frontend/assets/img/icons/shopping-bag.svg" alt="">
-                <span class="counter">0</span>
-              </a>
-              <div class="user-header d-none d-lg-block">
-                <a href="#/" class="user-header-button js-toggle-user-nav">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  Đăng nhập
-                </a>
-                <ul class="user-nav-header">
-                  <li>
-                    <a href="dang-nhap#login">Đăng nhập</a>
-                  </li>
-                  <li>
-                    <a href="dang-ky#register">Đăng ký</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <?php include('layout/header.php'); ?>
 
 
-      <div class="header-nav">
-        <div class="container">
-          <div class="header-nav-inner-container">
-            <a class="toggle-mobile-menu js-toggle-mobile-menu d-lg-none" href="#/">
-              <i class="fas fa-bars fa-2x"></i>
-            </a>
-            <!-- DESKTOP MENU HERE-->
-            <div class="desktop-menu d-none d-lg-flex">
-              <ul class="main-menu">
-                <li class="li-category">
-                  <a href="#">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                    DANH MỤC SẢN PHẨM
-                  </a>
-                </li>
-                <li class="li-menu">
-                  <a href="./index.html">
-                    Trang chủ
-                  </a>
-                </li>
-                <li class="li-menu">
-                  <a href="./aboutus.html">
-                    Giới thiệu
-                  </a>
-                </li>
-                <li class="li-menu">
-                  <a href="danh-muc/banh-sinh-nhat">
-                    B&aacute;nh Sinh Nhật
-                  </a>
-                </li>
-                <li class="li-menu">
-                  <a href="tin-tuc/banh-giang-sinh-banh-noel-2022-giang-sinh-ngot-ngao-9">
-                    B&aacute;nh Noel (HOT)
-                  </a>
-                </li>
-                <li class="li-menu">
-                  <a href="#">
-                    Tin v&agrave; Sự Kiện
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                  </a>
-                  <ul class='submenu'>
-                    <li> <a href='./huong-dan-mua-hang.html'> Hướng dẫn mua hàng&nbsp;&nbsp;</a></li>
-                    <li> <a href='./tin-tuc.html'> Tin tức&nbsp;&nbsp;</a></li>
-                  </ul>
-                </li>
-                <li class="li-menu">
-                  <a href="./contactus.html">
-                    Li&ecirc;n hệ
-                  </a>
-                </li>
-
-              </ul>
-              <!-- <ul class="menu-category">
-                <li>
-                  <a href="danh-muc/banh-sinh-nhat">
-                    B&aacute;nh sinh nhật
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                  </a>
-                  <ul class='submenu'>
-                    <li> <a href='danh-muc/ga-to-kem-tuoi'> Gato kem tươi&nbsp;&nbsp;</a></li>
-                    <li> <a href='danh-muc/ga-to-kem-bo'> Gato kem bơ&nbsp;&nbsp;</a></li>
-                    <li> <a href='danh-muc/banh-mousse'> Bánh mousse&nbsp;&nbsp;</a></li>
-                    <li> <a href='danh-muc/banh-valentine'> Bánh valentine&nbsp;&nbsp;</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="danh-muc/banh-sinh-nhat-cho-be">
-                    B&aacute;nh Sinh Nhật Cho B&eacute;
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                  </a>
-                  <ul class='submenu'>
-                    <li> <a href='danh-muc/banh-hinh-so'> Bánh hình số&nbsp;&nbsp;</a></li>
-                    <li> <a href='danh-muc/banh-12-con-giap'> Bánh 12 con giáp&nbsp;&nbsp;</a></li>
-                    <li> <a href='danh-muc/banh-sang-tao'> Bánh sáng tạo&nbsp;&nbsp;</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="">
-                    Chocolate
-                  </a>
-                </li>
-                <li>
-                  <a href="danh-muc/cookies-va-mini-cake">
-                    Cookies v&agrave; Mini Cake
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                  </a>
-                  <ul class='submenu'>
-                    <li> <a href='danh-muc/macaron'> Macaron&nbsp;&nbsp;</a></li>
-                    <li> <a href='danh-muc/cookies'> Cookies&nbsp;&nbsp;</a></li>
-                    <li> <a href='danh-muc/choux-pastries'> Choux Pastries&nbsp;&nbsp;</a></li>
-                    <li> <a href='danh-muc/banh-mi'> Bánh Mì&nbsp;&nbsp;</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="danh-muc/banh-trung-thu">
-                    B&aacute;nh trung thu
-                  </a>
-                </li>
-              </ul> -->
-            </div>
-            <!-- END DESKTOP MENU HERE-->
-
-          </div>
-        </div>
-      </div>
-    </header>
-
-
-    <div class="owl-carousel main-carousel">
-      <div>
-        <a href="">
-          <img src="./public/src/banner/z4458083746461_3a6989903f9bf42aa8efb2328e55499c.jpg" alt="">
-        </a>
-      </div>
+    <div class="owl-carousel main-carousel" id="owl-carousel">
       <div>
         <a href="">
           <img src="./public/src/banner/z4458084011224_90ad4b1b01f518c48a899797ac1ac2b0.jpg" alt="">
-        </a>
-      </div>
-      <div>
-        <a href="">
-          <img src="./public/src/banner/z4458084128313_4c89a8348797779a053d148cfae8a4c2.jpg" alt="">
-        </a>
-      </div>
-      <div>
-        <a href="">
-          <img src="./public/src/banner/z4458312752171_df60d94d081170736f9bb313f18480e4.jpg" alt="">
         </a>
       </div>
       <div>
@@ -374,24 +58,24 @@
     <section>
       <div class="container" style="margin-top: 10px;">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 col-4">
             <div class="thumbnail">
-              <img src="./public/src/banner/z4458083746461_3a6989903f9bf42aa8efb2328e55499c.jpg" alt="Fjords"
-                style="width:100%">
+              <img src="./public/src/banner/z4468557711246_03e0b75e21238e550b5cad02f92000fb.jpg" alt="Fjords"
+                style="width:100%" class="img-fluid">
               </a>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-4">
             <div class="thumbnail">
-              <img src="./public/src/banner/z4458083746461_3a6989903f9bf42aa8efb2328e55499c.jpg" alt="Fjords"
-                style="width:100%">
+              <img src="./public/src/banner/z4458084128313_4c89a8348797779a053d148cfae8a4c2.jpg" alt="Fjords"
+                style="width:100%" class="img-fluid">
               </a>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-4">
             <div class="thumbnail">
-              <img src="./public/src/banner/z4458083746461_3a6989903f9bf42aa8efb2328e55499c.jpg" alt="Fjords"
-                style="width:100%">
+              <img src="./public/src/banner/z4458312752171_df60d94d081170736f9bb313f18480e4.jpg" alt="Fjords"
+                style="width:100%" class="img-fluid">
               </a>
             </div>
           </div>
@@ -414,17 +98,6 @@
                   <img src="./public/src/cake/z4345108021624_08758d4bd76bfd074f59a2eac5abbc3f.jpg" alt="Opera Cake " />
                 </a>
               </div>
-              <div class="product-info">
-                <p class="product-name">
-                  <a href="#/">
-                    Opera Cake
-                  </a>
-                </p>
-                <div class="product-price">
-
-                  <span class="price">400,000&#8363;</span>
-                </div>
-              </div>
             </div>
             <div class="one-product-container">
 
@@ -439,11 +112,8 @@
                   <a href="#/">
                     Mousse Chanh Leo
                   </a>
-                </p>
-                <div class="product-price">
-
                   <span class="price">380,000&#8363;</span>
-                </div>
+                </p>
               </div>
             </div>
             <div class="one-product-container">
@@ -501,10 +171,11 @@
                   <a href="#/">
                     Red Velvet Cake Heart
                   </a>
+                  <span class="price">Liên hệ</span>
                 </p>
                 <div class="product-price">
 
-                  <span class="price">Liên hệ</span>
+                  
                 </div>
               </div>
             </div>
@@ -523,10 +194,11 @@
                   <a href="#/">
                     Valentine cake 003
                   </a>
+                  <span class="price">Liên hệ</span>
                 </p>
                 <div class="product-price">
 
-                  <span class="price">Liên hệ</span>
+                  
                 </div>
               </div>
             </div>
@@ -545,10 +217,11 @@
                   <a href="#/">
                     Red Apple Cake
                   </a>
+                  <span class="price">350,000&#8363;</span>
                 </p>
                 <div class="product-price">
 
-                  <span class="price">350,000&#8363;</span>
+                  
                 </div>
               </div>
             </div>
@@ -565,10 +238,11 @@
                   <a href="#/">
                     B&aacute;nh Tiramisu
                   </a>
+                  <span class="price">320,000&#8363;</span>
                 </p>
                 <div class="product-price">
 
-                  <span class="price">320,000&#8363;</span>
+                  
                 </div>
               </div>
             </div>
@@ -585,10 +259,11 @@
                   <a href="#/">
                     Fresh Cream Cake 001
                   </a>
+                  <span class="price">320,000&#8363;</span>
                 </p>
                 <div class="product-price">
 
-                  <span class="price">320,000&#8363;</span>
+                  
                 </div>
               </div>
             </div>
@@ -605,10 +280,11 @@
                   <a href="#/">
                     Tiger Cake Baby 01A
                   </a>
+                  <span class="price">380,000&#8363;</span>
                 </p>
                 <div class="product-price">
 
-                  <span class="price">380,000&#8363;</span>
+                  
                 </div>
               </div>
             </div>
@@ -627,97 +303,15 @@
                   <a href="#/">
                     B&aacute;nh Sinh Nhật Số 2
                   </a>
-                </p>
-                <div class="product-price">
-
                   <span class="price">520,000&#8363;</span>
-                </div>
-              </div>
-            </div>
-            <div class="one-product-container">
-
-              <div class="product-images">
-                <a class="product-image hover-animation" href="san-pham/banh-sinh-nhat-chu-khi-19">
-                  <img src="./public/src/cake/z4345108021624_08758d4bd76bfd074f59a2eac5abbc3f.jpg" alt="Opera Cake " />
-                  alt="B&aacute;nh sinh nhật ch&uacute; Khỉ" />
-                  <img src="./public/src/cake/z4345108021624_08758d4bd76bfd074f59a2eac5abbc3f.jpg" alt="Opera Cake " />
-                  alt="B&aacute;nh sinh nhật ch&uacute; Khỉ" />
-                </a>
-              </div>
-              <div class="product-info">
-                <p class="product-name">
-                  <a href="#/">
-                    B&aacute;nh sinh nhật ch&uacute; Khỉ
-                  </a>
                 </p>
                 <div class="product-price">
 
-                  <span class="price">380,000&#8363;</span>
+                  
                 </div>
               </div>
             </div>
-            <div class="one-product-container">
-
-              <div class="product-images">
-                <a class="product-image hover-animation" href="san-pham/baby-cake-st01-25">
-                  <img src="./public/src/cake/z4345108021624_08758d4bd76bfd074f59a2eac5abbc3f.jpg" alt="Opera Cake " />
-                  <img src="./public/src/cake/z4345108021624_08758d4bd76bfd074f59a2eac5abbc3f.jpg" alt="Opera Cake " />
-                </a>
-              </div>
-              <div class="product-info">
-                <p class="product-name">
-                  <a href="#/">
-                    Baby Cake ST01
-                  </a>
-                </p>
-                <div class="product-price">
-
-                  <span class="price">520,000&#8363;</span>
-                </div>
-              </div>
-            </div>
-            <div class="one-product-container">
-
-              <div class="product-images">
-                <a class="product-image hover-animation" href="san-pham/fresh-spring-cake-44">
-                  <img src="./public/src/cake/z4345108021624_08758d4bd76bfd074f59a2eac5abbc3f.jpg" alt="Opera Cake " />
-                  <img src="./public/src/cake/z4345108021624_08758d4bd76bfd074f59a2eac5abbc3f.jpg" alt="Opera Cake " />
-                </a>
-              </div>
-              <div class="product-info">
-                <p class="product-name">
-                  <a href="#/">
-                    Fresh Spring Cake
-                  </a>
-                </p>
-                <div class="product-price">
-
-                  <span class="price">320,000&#8363;</span>
-                </div>
-              </div>
-            </div>
-            <div class="one-product-container">
-
-              <div class="product-images">
-                <a class="product-image hover-animation" href="san-pham/mousse-tra-xanh-63">
-                  <img src="./public/src/cake/z4345108021624_08758d4bd76bfd074f59a2eac5abbc3f.jpg"
-                    alt="Valentine cake 002" />
-                  <img src="./public/src/cake/z4345108021624_08758d4bd76bfd074f59a2eac5abbc3f.jpg"
-                    alt="Valentine cake 002" />
-                </a>
-              </div>
-              <div class="product-info">
-                <p class="product-name">
-                  <a href="#/">
-                    Mousse Tr&agrave; Xanh
-                  </a>
-                </p>
-                <div class="product-price">
-
-                  <span class="price">190,000&#8363;</span>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -3095,141 +2689,9 @@
     </section>
 
 
+    <?php include('layout/footer.php'); ?>
 
-
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-xl-3">
-            <div class="body-column">
-              <div class="img-footer">
-                <img src="./public/src/logo/z4456204188452_ddfc353090918214453a5d04758e422c.jpg" alt="Logo"
-                  class="img-fluid" />
-              </div>
-              <p class="text">
-                <img src="public/frontend/assets/img/icons/location.png" alt="" class="img-fluid">
-                nha ba nhi
-              </p>
-              <p class="text">
-                <img src="public/frontend/assets/img/icons/phone.png" alt="" class="img-fluid">
-                090 754 6668 | 096 938 6611
-              </p>
-            </div>
-          </div>
-          <div class="col-6 col-xl-3">
-            <div class="body-column">
-              <p class="title text-yellow">Danh mục sản phẩm</p>
-              <ul>
-                <li>
-                  <a href="danh-muc/banh-sinh-nhat">
-                    B&aacute;nh sinh nhật
-                  </a>
-                </li>
-                <li>
-                  <a href="danh-muc/banh-sinh-nhat-cho-be">
-                    B&aacute;nh Sinh Nhật Cho B&eacute;
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Chocolate
-                  </a>
-                </li>
-                <li>
-                  <a href="danh-muc/cookies-va-mini-cake">
-                    Cookies v&agrave; Mini Cake
-                  </a>
-                </li>
-                <li>
-                  <a href="danh-muc/banh-trung-thu">
-                    B&aacute;nh trung thu
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-6 col-xl-3">
-            <div class="body-column">
-              <p class="title text-yellow">Trợ giúp</p>
-              <ul>
-                <li>
-                  <a href="">
-                    C&acirc;u hỏi thường gặp
-                  </a>
-                </li>
-                <li>
-                  <a href="./huong-dan-mua-hang.html">
-                    Hướng dẫn đặt h&agrave;ng
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Ch&iacute;nh s&aacute;ch vận chuyển
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Phương thức thanh to&aacute;n
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Quy tr&igrave;nh đổi trả h&agrave;ng
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Điều khoản bảo mật
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Quy định chung
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-6 col-xl-3">
-            <div class="body-column">
-              <p class="title text-yellow">Trợ giúp</p>
-              <ul>
-                <li>
-                  <a href="">
-                    C&acirc;u hỏi thường gặp
-                  </a>
-                </li>
-                <li>
-                  <a href="./huong-dan-mua-hang.html">
-                    Hướng dẫn đặt h&agrave;ng
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Ch&iacute;nh s&aacute;ch vận chuyển
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Phương thức thanh to&aacute;n
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright text-center mb-2">
-        copyright@2022 Ngoc Nhi Bakery - Thiết kế bởi: T|H|P|N
-      </div>
-  </div>
-  <div>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.668999333231!2d106.59343557379414!3d10.759973059499526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752c4fae2d5ea5%3A0x4b305304c9baab94!2zMjQyIEzDqiDEkMOsbmggQ-G6qW4sIFTDom4gVOG6oW8sIELDrG5oIFTDom4sIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1687618464853!5m2!1sen!2s"
-      width="1264" height="210" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-  </footer>
+    
 
   <script src="public/plugins/js/jquery3.3.1.min.js"></script>
   <script src="public/frontend/assets/js/config.js"></script>
@@ -3241,6 +2703,19 @@
   <script src="public/myplugins/js/messagebox.js"></script>
 
   </div>
+
+
+  <script>
+    var owl = $('#owl-carousel');
+    owl.owlCarousel({
+      items: 1,
+      loop: true,
+      // margin:10,
+      autoplay: true,
+      autoplayTimeout: 1500,
+      autoplayHoverPause: false
+    });
+  </script>
 </body>
 
 </html>

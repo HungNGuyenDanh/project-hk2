@@ -4,203 +4,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign In Page</title>
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
-
-        *:focus {
-            outline: none;
-        }
-
-        body {
+        * {
             margin: 0;
             padding: 0;
-            background: #DDD;
-            font-size: 16px;
-            color: #222;
-            font-family: "Vidaloka", sans-serif;
-            font-weight: 300;
+            font-family: 'poppins', sans-serif;
         }
 
-        #login-box {
-            position: relative;
-            margin: 5% auto;
-            width: 600px;
-            height: 400px;
-            background: #c98d83;
-            border-radius: 2px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-        }
-
-        .left {
-            position: absolute;
-            top: 0;
-            left: 0;
-            box-sizing: border-box;
-            padding: 40px;
-            width: 300px;
-            height: 400px;
-        }
-
-        h1 {
-            margin: 0 0 20px 0;
-            font-weight: 300;
-            font-size: 28px;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            display: block;
-            box-sizing: border-box;
-            margin-bottom: 20px;
-            padding: 4px;
-            width: 220px;
-            height: 32px;
-            border: none;
-            border-bottom: 1px solid #AAA;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            font-size: 15px;
-            transition: 0.2s ease;
-            border-radius: 5px;
-        }
-
-        input[type="text"]:focus,
-        input[type="password"]:focus {
-            border-bottom: 2px solid #16a085;
-            color: #16a085;
-            transition: 0.2s ease;
-        }
-
-        input[type="submit"] {
-            margin-top: 28px;
-            width: 120px;
-            height: 32px;
-            background: #783b31;
-            border: none;
-            border-radius: 2px;
-            color: #FFF;
-            font-weight: 500;
-            text-transform: uppercase;
-            transition: 0.1s ease;
-            cursor: pointer;
-            border-radius: 5px;
-            font-family: "Vidaloka", sans-serif;
-        }
-
-        input[type="submit"]:hover,
-        input[type="submit"]:focus {
-            opacity: 0.8;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-            transition: 0.1s ease;
-        }
-
-        input[type="submit"]:active {
-            opacity: 1;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-            transition: 0.1s ease;
-        }
-
-        .or {
-            position: absolute;
-            top: 180px;
-            left: 280px;
-            width: 40px;
-            height: 40px;
-            background: #783b31;
-            border-radius: 50%;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-            line-height: 40px;
-            text-align: center;
-            color: wheat;
-        }
-
-        .right {
-            position: absolute;
-            top: 0;
-            right: 0;
-            box-sizing: border-box;
-            padding: 40px;
-            width: 300px;
-            height: 400px;
-            background: url('https://goo.gl/YbktSj');
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            background: url(./images/z4468923591853_8550ce75e46905c47a016890f1aba20d.jpg) no-repeat;
             background-size: cover;
             background-position: center;
-            border-radius: 0 2px 2px 0;
         }
 
-        .right .loginwith {
-            display: block;
-            margin-bottom: 40px;
-            font-size: 28px;
+        .form-box {
+            position: relative;
+            width: 400px;
+            height: 630px;
+            background: rgba(240, 248, 255, 0.55);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 2em;
             color: black;
             text-align: center;
         }
 
-        button.social-signin {
-            margin-bottom: 20px;
-            width: 220px;
-            height: 36px;
+        .inputbox {
+            position: relative;
+            margin: 30px 0;
+            width: 310px;
+            border-bottom: 2px solid black;
+        }
+
+        .inputbox label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            color: black;
+            font-size: 1em;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        input:focus~label,
+        input:valid~label {
+            top: -5px;
+        }
+
+        .inputbox input {
+            width: 100%;
+            height: 40px;
+            background: transparent;
             border: none;
-            border-radius: 2px;
-            color: #FFF;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 500;
-            transition: 0.2s ease;
+            outline: none;
+            font-size: 1em;
+            padding: 0 30px 0 5px;
+            color: black;
+        }
+
+        .forget {
+            margin: -15px 0 15px;
+            font-size: .9em;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+        }
+
+        .forget label input {
+            margin-right: 3px;
+        }
+
+        .forget label {
+            color: #000000;
+            margin-right: 20px;
+        }
+
+        .forget label a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .forget label a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            width: 100%;
+            height: 40px;
+            border-radius: 40px;
+            background: #fff;
+            border: none;
+            outline: none;
             cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
         }
 
-        button.social-signin:hover,
-        button.social-signin:focus {
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-            transition: 0.2s ease;
+        .register {
+            font-size: .9em;
+            color: #000000;
+            margin: 20px 20px 20px 10px;
+            text-align: center;
+
         }
 
-        button.social-signin:active {
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-            transition: 0.2s ease;
+        .register p a {
+            text-decoration: none;
+            font-weight: 600;
         }
 
-        button.social-signin.facebook {
-            background: #32508E;
-        }
-
-        button.social-signin.twitter {
-            background: #55ACEE;
-        }
-
-        button.social-signin.google {
-            background: #DD4B39;
-        }
-
-        input::placeholder {
-            font-family: "Vidaloka", sans-serif;
+        .register p a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
-    <div id="login-box">
-        <div class="left">
-            <h1>Sign up</h1>
-
-            <input type="text" name="username" placeholder="Username" />
-            <input type="text" name="email" placeholder="E-mail" />
-            <input type="password" name="password" placeholder="Password" />
-            <input type="password" name="password2" placeholder="Retype password" />
-
-            <input type="submit" name="signup_submit" value="Sign me up"/>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="">
+                    <h2> Đăng Ký </h2>
+                    <div class="inputbox">
+                        <input type="text" required>
+                        <label for=""> Email : </label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="password" required>
+                        <label for=""> Nhập mật khẩu : </label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="password" required>
+                        <label for=""> Xác nhận mật khẩu : </label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" required>
+                        <label for=""> Nhập tên người dùng : </label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" required>
+                        <label for=""> Nhập số điện thoại : </label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" required>
+                        <label for=""> Địa chỉ : </label>
+                    </div>
+                    <button> Đăng Ký </button>
+                    <div class="register">
+                        <p> Tôi đã có tài khoản <a href="login.php"> Đăng Nhập </a></p>
+                    </div>
+                </form>
+            </div>
         </div>
-
-        <div class="right">
-            <span class="loginwith">Sign in with<br />social network</span>
-
-            <button class="social-signin facebook">Log in with facebook</button>
-            <button class="social-signin twitter">Log in with Twitter</button>
-            <button class="social-signin google">Log in with Google+</button>
-        </div>
-        <div class="or">OR</div>
-    </div>
+    </section>
 </body>
 
 </html>

@@ -17,7 +17,7 @@
             align-items: center;
             min-height: 100vh;
             width: 100%;
-            background: url(./images/z4468923591853_8550ce75e46905c47a016890f1aba20d.jpg) no-repeat;
+            background: url(./images/z4468923584381_eb598497fa0a996ad16e4d2d47855459.jpg) no-repeat;
             background-size: cover;
             background-position: center;
                 }
@@ -121,19 +121,23 @@
         <div class="form-box">
             <div class="form-value">
                 <form action="">
-                    <h2>Admin Login</h2>
+                    <h2> Đăng Nhập </h2>
                     <div class="inputbox">
                         <input type="text" required>
-                        <label for="">Your Username : </label>
+                        <label for="">Your Email : </label>
                     </div>
                     <div class="inputbox">
                         <input type="password" required>
                         <label for=""> Your Password : </label>
                     </div>
                     <div class="forget">
+                        <label for=""><input type="checkbox"> Remember me </label>
                         <a href="">Forget Password</a>
                     </div>
                     <button>Log In</button>
+                    <div class="register">
+                        <p>Don't have a account? <a href="signIn.html">Sign In</a></p>
+                    </div>
                 </form>
             </div>
         </div>
