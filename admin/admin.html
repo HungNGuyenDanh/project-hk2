@@ -29,47 +29,103 @@
             </div>
 
             <div class="sidebar">
-                <a href="#" class="active">
-                    <span class="material-symbols-sharp">grid_view</span>
-                    <h3>Dashboard</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">person</span>
-                    <h3>Customer</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">receipt_long</span>
-                    <h3>Orders</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">insights</span>
-                    <h3>Analytics</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">mail</span>
-                    <h3>Messages</h3>
-                    <span class="message-count">27</span>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">inventory</span>
-                    <h3>Products</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">report</span>
-                    <h3>Reports</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">settings</span>
-                    <h3>Settings</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">add</span>
-                    <h3>Add Product</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">logout</span>
-                    <h3>Logout</h3>
-                </a>
+                <ul>
+                    <li class="nav-item active">
+                        <a href="./dashboad.html" class="nav-link">
+                            <span class="material-symbols-sharp">grid_view</span>
+                            <h3>Dashboard</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./logIn.php" class="nav-link">
+                            <span class="material-symbols-sharp">person</span>
+                            <h3>Customer</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="sub-btn nav-link">
+                            <div class="title">
+                                <span class="material-symbols-sharp">receipt_long</span>
+                                <h3>Orders</h3>
+                            </div>
+                            <span class="material-symbols-sharp more">expand_more</span>
+                            <span class="material-symbols-sharp less">expand_less</span>
+                        </div>
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="./logIn.php">
+                                    <span class="material-symbols-sharp unchecked">radio_button_unchecked</span>
+                                    <span class="material-symbols-sharp checked">radio_button_checked</span>
+                                    <h3>detail</h3>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./logIn.php">
+                                    <span class="material-symbols-sharp unchecked">radio_button_unchecked</span>
+                                    <span class="material-symbols-sharp checked">radio_button_checked</span>
+                                    <h3>detail</h3>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./dashboad.html">
+                                    <span class="material-symbols-sharp unchecked">radio_button_unchecked</span>
+                                    <span class="material-symbols-sharp checked">radio_button_checked</span>
+                                    <h3>detail</h3>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./logIn.php">
+                                    <span class="material-symbols-sharp unchecked">radio_button_unchecked</span>
+                                    <span class="material-symbols-sharp checked">radio_button_checked</span>
+                                    <h3>detail</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./signIn.php" class="nav-link">
+                            <span class="material-symbols-sharp">insights</span>
+                            <h3>Analytics</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./signIn.php" class="nav-link">
+                            <span class="material-symbols-sharp">mail</span>
+                            <h3>Messages</h3>
+                            <span class="message-count">27</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./signIn.php" class="nav-link">
+                            <span class="material-symbols-sharp">inventory</span>
+                            <h3>Products</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./signIn.php" class="nav-link">
+                            <span class="material-symbols-sharp">report</span>
+                            <h3>Reports</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./signIn.php" class="nav-link">
+                            <span class="material-symbols-sharp">settings</span>
+                            <h3>Settings</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./signIn.php" class="nav-link">
+                            <span class="material-symbols-sharp">add</span>
+                            <h3>Add Product</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item logout">
+                        <a href="./signIn.php" class="nav-link">
+                            <span class="material-symbols-sharp">logout</span>
+                            <h3>Logout</h3>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </aside>
 
@@ -103,82 +159,65 @@
                 </div>
             </div>
 
-            <div id="main-page">
-
-            </div>
+            <div id="main-page"></div>
         </div>
     </div>
 
-    <!-- <script>
+    <script>
         $(document).ready(function () {
-            $(".sidebar a").click(function (event) {
-                link = $(this).attr("href");
-
-                $.ajax({
-                    url: link,
-                })
-                    .done(function (html) {
-                        $("#main-page").empty().append(html);
+            $('.sidebar .nav-item .sub-btn').on('click', function () {
+                $(this).next('.sub-menu').slideToggle();
+                $(this).children('.more').toggle();
+                $(this).children('.less').toggle();
+            });
+            $(".sidebar ul .nav-item").click(function () {
+                link = $(this).children('.nav-link').attr("href");
+                $(this).siblings().removeClass("active");
+                $(this).addClass("active");
+                const hasSubBtn = $(this).children("div").hasClass("sub-btn");
+                const hasMenuItem = $('.sidebar .nav-item .sub-menu li').hasClass("active");
+                if (!hasSubBtn && hasMenuItem) {
+                    $('.sidebar .nav-item .sub-menu li').removeClass("active");
+                }
+                if (link != null) {
+                    $.ajax({
+                        url: link,
                     })
-                    .fail(function () {
-                        console.log("error");
-                    })
-                    .always(function () {
-                        console.log("cpmpleted");
-                    });
+                        .done(function (response) {
+                            $("#main-page").empty().append(response);
+                        })
+                        .fail(function () {
+                            console.log("error");
+                        })
+                        .always(function () {
+                            console.log("completed");
+                        });
+                }
                 return false;
             });
-        }); -->
-    </script>
-
-    <script>
-        const main = document.querySelector("#main");
-        const sideMenu = document.querySelector("aside");
-        const menuBtn = document.querySelector("#menu-btn");
-        const showMenu = document.querySelector("#show-menu");
-        const shortenMenu = document.querySelector("#shorten-menu");
-        const closeBtn = document.querySelector("#close-btn");
-        const themeToggler = document.querySelector(".theme-toggler");
-        const list = document.querySelectorAll("aside .sidebar a");
-
-        function addRemoveClasses(element, addClasses, removeClasses) {
-            element.classList.add(...addClasses);
-            element.classList.remove(...removeClasses);
-        }
-
-        menuBtn.addEventListener('click', () => {
-            addRemoveClasses(sideMenu, ["active"], ["show-menu", "shorten-menu"]);
-            addRemoveClasses(main, ["active"], ["show-menu", "shorten-menu"]);
-        });
-
-        showMenu.addEventListener('click', () => {
-            addRemoveClasses(sideMenu, ["show-menu"], ["shorten-menu"]);
-            addRemoveClasses(main, ["show-menu"], ["shorten-menu"]);
-        });
-
-        shortenMenu.addEventListener('click', () => {
-            addRemoveClasses(sideMenu, ["shorten-menu"], ["show-menu"]);
-            addRemoveClasses(main, ["shorten-menu"], ["show-menu"]);
-        });
-
-        closeBtn.addEventListener('click', () => {
-            sideMenu.classList.remove("active");
-        });
-
-        themeToggler.addEventListener('click', () => {
-            document.body.classList.toggle('dark-theme-variables');
-            themeToggler.querySelectorAll('span').forEach(span => span.classList.toggle('active'));
-        });
-
-        function activeLink() {
-            list.forEach(item => {
-                item.classList.remove("active");
+            $(".sidebar .nav-item .sub-menu .menu-item").click(function (e) {
+                link = $(this).children('a').attr("href");
+                $(this).siblings().removeClass("active");
+                $(this).addClass("active");
+                if (link != null) {
+                    $.ajax({
+                        url: link,
+                    })
+                        .done(function (response) {
+                            $("#main-page").empty().append(response);
+                        })
+                        .fail(function () {
+                            console.log("error");
+                        })
+                        .always(function () {
+                            console.log("completed");
+                        });
+                }
+                return false;
             });
-            this.classList.add("active");
-        }
-
-        list.forEach(item => item.addEventListener("click", activeLink));
+        });
     </script>
+    <script src="./admin.js"></script>
 </body>
 
 </html>

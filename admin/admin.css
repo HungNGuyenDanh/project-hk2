@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 :root {
-  --color-primary: #7380ec;
+  --color-primary: #E487AF;
   --color-danger: #ff7782;
   --color-success: #41f1b6;
   --color-warning: #ffbb55;
@@ -9,7 +9,7 @@
   --color-info-dark: #7d8da1;
   --color-info-light: #dce1eb;
   --color-dark: #363949;
-  --color-light: rgba(132, 139, 200, 0.18);
+  --color-light: rgb(44 48 78 / 87%);
   --color-primary-variant: #111e88;
   --color-dark-variant: #677483;
   --color-background: #f6f6f9;
@@ -160,7 +160,7 @@ aside .logo {
   align-items: center;
 }
 
-aside .logo img {
+aside .logo .img-logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -171,6 +171,9 @@ aside .logo .img-logo {
   width: 6rem;
   height: 4rem;
   margin: auto;
+  overflow: hidden;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 
 aside .close {
@@ -194,33 +197,61 @@ aside h3 {
   font-weight: 500;
 }
 
-aside .sidebar a {
-  display: flex;
-  color: var(--color-info-dark);
-  margin-left: 2rem;
-  gap: 1rem;
-  align-items: center;
-  position: relative;
-  height: 3.7rem;
-  transition: all 300ms ease;
+
+aside .sidebar ul{
+  left: 0;
 }
 
-aside .sidebar a span {
+aside .sidebar .nav-link,
+aside .sidebar .sub-btn .title,
+aside .sidebar .nav-item .sub-menu a{
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  height: 3.7rem;
+  align-items: center;
+  transition: all 300ms ease;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: var(--color-info-dark);
+}
+
+aside .sidebar .nav-item .sub-menu .menu-item {
+  width: 90%;
+  margin-left: 10%;
+}
+
+aside .sidebar .nav-item .sub-menu .menu-item .checked,
+aside .sidebar .nav-item .sub-menu .menu-item.active .unchecked {
+  display: none;
+}
+aside .sidebar .nav-item .sub-menu .menu-item.active .checked {
+  display: block;
+}
+
+
+
+aside .sidebar .nav-item a span,
+aside .sidebar .sub-btn .title span {
   font-size: 1.6rem;
   transition: all 300ms ease;
 }
 
-aside .sidebar a:last-child {
-  margin-top: 50px;
-}
-
-aside .sidebar a.active {
+aside .sidebar .nav-item.active .nav-link {
   background: var(--color-light);
   color: var(--color-primary);
   margin-left: 0;
 }
 
-aside .sidebar a.active::before {
+aside .sidebar ul .nav-item.active .nav-link a,
+aside .sidebar .nav-item.active .nav-link .title{
+  color: var(--color-primary);
+}
+
+aside .sidebar .nav-item.active .nav-link::before {
   content: "";
   width: 6px;
   height: 100%;
@@ -228,20 +259,20 @@ aside .sidebar a.active::before {
   background: var(--color-primary);
 }
 
-aside .sidebar a.active span {
-  color: var(--color-primary);
-  margin-left: calc(1rem - 3px);
-}
-
-aside .sidebar a:hover {
+aside .sidebar ul .nav-item.active .nav-link a span {
   color: var(--color-primary);
 }
 
-aside .sidebar a:hover span {
+aside .sidebar .nav-link:hover,
+aside .sidebar .sub-btn .title:hover {
+  color: var(--color-primary);
+}
+
+aside .sidebar .nav-link:hover span {
   margin-left: 1rem;
 }
 
-aside .sidebar .message-count {
+aside .sidebar ul .nav-item a .message-count {
   position: absolute;
   top: 12px;
   left: 14px;
@@ -250,6 +281,23 @@ aside .sidebar .message-count {
   padding: 2px 5px;
   font-size: 5px;
   border-radius: var(--border-radius-1);
+}
+aside .sidebar ul .nav-item.active .nav-link a .message-count {
+  background: var(--color-danger);
+  color: var(--color-white);
+}
+
+aside .sidebar ul .logout {
+  margin-top: 40px;
+}
+
+aside .sidebar .sub-menu {
+  position: relative;
+  display: none;
+}
+
+aside .sidebar .sub-btn .less{
+  display: none;
 }
 
 /* ============Main======== */
@@ -362,6 +410,7 @@ aside .sidebar .message-count {
   aside.show-menu .logo h2,
   aside.show-menu .sidebar h3 {
     display: inline;
+    transition: all 400ms ease;
   }
 
   aside.shorten-menu .logo h2,
@@ -372,10 +421,6 @@ aside .sidebar .message-count {
   aside .logo h2,
   aside .sidebar h3 {
     display: none;
-  }
-
-  aside .sidebar a {
-    width: 5.6rem;
   }
 
   #main .top .menu #show-menu,
@@ -436,18 +481,12 @@ aside .sidebar .message-count {
     z-index: 3;
     box-shadow: 1rem 3rem 4rem var(--color-light);
     padding-right: var(--card-padding);
-    display: none;
-    animation: showMenu 400ms ease forwards;
+    transition: all 0.8s ease;
   }
 
   aside.active {
-    display: block;
-  }
-
-  @keyframes showMenu {
-    to {
-      left: 0;
-    }
+    left: 0;
+    transition: all 0.4s ease;
   }
 
   aside .logo {
@@ -458,13 +497,12 @@ aside .sidebar .message-count {
     display: inline;
   }
 
-  aside .sidebar h3 {
+  aside .sidebar ul li h3 {
     display: inline;
   }
 
-  aside .sidebar a {
+  aside .sidebar ul li a {
     width: 100%;
-    height: 3.4rem;
   }
 
   aside .close {
