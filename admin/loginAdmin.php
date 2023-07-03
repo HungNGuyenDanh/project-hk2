@@ -32,7 +32,7 @@
             justify-content: center;
             align-items: center;
         }
-        h2{
+        .loginA-h2{
             font-size: 2em;
             color: black;
             text-align: center;
@@ -121,7 +121,7 @@
         <div class="form-box">
             <div class="form-value">
                 <form action="">
-                    <h2>Admin Login</h2>
+                    <h2 class="loginA-h2">Admin Login</h2>
                     <div class="inputbox">
                         <input type="text" required>
                         <label for="">Your Username : </label>

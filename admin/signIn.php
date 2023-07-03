@@ -35,7 +35,7 @@
             align-items: center;
         }
 
-        h2 {
+        .sigin-h2 {
             margin-top: 30px;
             font-size: 2em;
             color: black;
@@ -138,7 +138,7 @@
         <div class="form-box">
             <div class="form-value">
                 <form action="">
-                    <h2> Đăng Ký </h2>
+                    <h2 class="sigin-h2"> Đăng Ký </h2>
                     <div class="inputbox">
                         <input type="text" required>
                         <label for=""> Email : </label>

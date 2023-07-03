@@ -1,37 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 :root {
+  --color-pink: #E487AF;
+  --color-light-pink: #FFF6F2;
   --color-primary: #E487AF;
   --color-danger: #ff7782;
   --color-success: #41f1b6;
   --color-warning: #ffbb55;
   --color-white: #fff;
   --color-info-dark: #7d8da1;
-  --color-info-light: #dce1eb;
+  /* --color-info-light: #dce1eb; */
   --color-dark: #363949;
-  --color-light: rgb(44 48 78 / 87%);
-  --color-primary-variant: #111e88;
-  --color-dark-variant: #677483;
+  --color-light: #d8dbf1;
+  /* --color-primary-variant: #111e88; */
   --color-background: #f6f6f9;
+  --color-background-li: #221936;
 
   --card-border-radius: 2rem;
   --border-radius-1: 0.4rem;
-  --border-radius-2: 0.8rem;
-  --border-radius-3: 1.2rem;
 
   --card-padding: 1.8rem;
-  --padding-1: 1.2rem;
   --width-sidebar: 18rem;
 
-  --box-shadow: 0 2rem 3rem var(--color-light);
+  --box-shadow: 0 1rem 2rem var(--color-light);
 }
 
 .dark-theme-variables {
   --color-background: #181a1e;
+  --color-background-li: #a89dc0;
   --color-white: #202528;
   --color-dark: #edeffd;
-  --color-dark-variant: #a3bdcc;
-  --color-light: rgba(0, 0, 0, 0.4);
+  --color-pink: #202528;
+  --color-light-pink: #a3bdcc;
+  --color-light: rgb(44 48 78 / 87%);
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
@@ -86,7 +87,7 @@ h2 {
   font-size: 1.4rem;
 }
 
-h3 {
+h3, h4 {
   font-size: 0.87rem;
 }
 
@@ -110,7 +111,7 @@ small {
 }
 
 p {
-  color: var(--color-dark-variant);
+  color: var(--color-info-dark);
 }
 
 b {
@@ -118,7 +119,7 @@ b {
 }
 
 .primary {
-  color: var(--color-primary);
+  color: var(--color-pink);
 }
 .success {
   color: var(--color-success);
@@ -138,8 +139,8 @@ aside {
   width: var(--width-sidebar);
   height: 100vh;
   position: fixed;
-  background-color: #FFF6F2;
-  border-left: 10px solid #FFF6F2;
+  background-color: var(--color-light-pink);
+  border-left: 10px solid var(--color-light-pink);
   transition: all 400ms ease;
 }
 aside::-webkit-scrollbar { 
@@ -193,7 +194,7 @@ aside .sidebar {
   left: 0;
 }
 
-aside h3 {
+aside h3, h4 {
   font-weight: 500;
 }
 
@@ -216,7 +217,7 @@ aside .sidebar .nav-item .sub-menu a{
   border-bottom-left-radius: 5px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  color: var(--color-info-dark);
+  color: var(--color-dark);
 }
 
 aside .sidebar .nav-item .sub-menu .menu-item {
@@ -241,14 +242,15 @@ aside .sidebar .sub-btn .title span {
 }
 
 aside .sidebar .nav-item.active .nav-link {
-  background: var(--color-light);
-  color: var(--color-primary);
+  background: var(--color-background-li);
+  color: var(--color-pink);
   margin-left: 0;
 }
 
 aside .sidebar ul .nav-item.active .nav-link a,
-aside .sidebar .nav-item.active .nav-link .title{
-  color: var(--color-primary);
+aside .sidebar .nav-item.active .nav-link .title,
+aside .sidebar .nav-item .sub-menu .menu-item.active a{
+  color: var(--color-pink);
 }
 
 aside .sidebar .nav-item.active .nav-link::before {
@@ -256,16 +258,16 @@ aside .sidebar .nav-item.active .nav-link::before {
   width: 6px;
   height: 100%;
   border-radius: 10px;
-  background: var(--color-primary);
+  background: var(--color-pink);
 }
 
 aside .sidebar ul .nav-item.active .nav-link a span {
-  color: var(--color-primary);
+  color: var(--color-pink);
 }
 
 aside .sidebar .nav-link:hover,
-aside .sidebar .sub-btn .title:hover {
-  color: var(--color-primary);
+aside .sidebar .sub-menu .menu-item a:hover {
+  color: var(--color-pink);
 }
 
 aside .sidebar .nav-link:hover span {
@@ -325,9 +327,9 @@ aside .sidebar .sub-btn .less{
   top: 0;
   align-items: center;
   padding: 0 0.8rem;
-  background: var(--color-white);
+  background: var(--color-light-pink);
   z-index: 2;
-  box-shadow: 0 1rem 1rem var(--color-light);
+  box-shadow: 0 0.5rem 0.5rem var(--color-light-pink);
   transition: all 400ms ease;
 }
 
@@ -371,7 +373,7 @@ aside .sidebar .sub-btn .less{
 }
 
 #main .profile-theme .theme-toggler span.active {
-  background: var(--color-primary);
+  background: var(--color-pink);
   color: white;
   border-radius: var(--border-radius-1);
 }
@@ -384,7 +386,7 @@ aside .sidebar .sub-btn .less{
 /* ============MEDIA RESPONSIVE======== */
 @media screen and (max-width: 1310px) {
   :root {
-    --width-sidebar: 7.3rem;
+    --width-sidebar: 9rem;
   }
   aside {
     width: var(--width-sidebar);
@@ -395,7 +397,7 @@ aside .sidebar .sub-btn .less{
     --width-sidebar: 18rem;
   }
   .shorten-menu {
-    --width-sidebar: 7.3rem;
+    --width-sidebar: 9rem;
   }
 
   aside.show-menu {

@@ -32,7 +32,7 @@
             justify-content: center;
             align-items: center;
         }
-        h2{
+        .login-h2{
             font-size: 2em;
             color: black;
             text-align: center;
@@ -121,7 +121,7 @@
         <div class="form-box">
             <div class="form-value">
                 <form action="">
-                    <h2> Đăng Nhập </h2>
+                    <h2 class="login-h2"> Đăng Nhập </h2>
                     <div class="inputbox">
                         <input type="text" required>
                         <label for="">Your Email : </label>

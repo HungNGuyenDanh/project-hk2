@@ -59,7 +59,7 @@ if (isset($_POST["submit"])) {
             align-items: center;
         }
 
-        h2 {
+        .register-h2 {
             font-size: 2em;
             color: black;
             text-align: center;
@@ -161,7 +161,7 @@ if (isset($_POST["submit"])) {
         <div class="form-box">
             <div class="form-value">
                 <form action="" method="post">
-                    <h2>Register Form</h2>
+                    <h2 class="register-h2">Register Form</h2>
                     <?php if (!empty($error)) { ?>
                         <p style="color: red; margin-bottom:0px; margin-top:17px;">
                             <?php echo $error; ?>
