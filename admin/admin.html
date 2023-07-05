@@ -45,6 +45,32 @@
                     <li class="nav-item">
                         <div class="sub-btn nav-link">
                             <div class="title">
+                                <span class="material-symbols-sharp">inventory</span>
+                                <h3>Products</h3>
+                            </div>
+                            <span class="material-symbols-sharp more">expand_more</span>
+                            <span class="material-symbols-sharp less">expand_less</span>
+                        </div>
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="./logIn.php">
+                                    <span class="material-symbols-sharp unchecked">radio_button_unchecked</span>
+                                    <span class="material-symbols-sharp checked">radio_button_checked</span>
+                                    <h4>Category</h4>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./logIn.php">
+                                    <span class="material-symbols-sharp unchecked">radio_button_unchecked</span>
+                                    <span class="material-symbols-sharp checked">radio_button_checked</span>
+                                    <h4>All Products</h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <div class="sub-btn nav-link">
+                            <div class="title">
                                 <span class="material-symbols-sharp">receipt_long</span>
                                 <h3>Orders</h3>
                             </div>
@@ -56,25 +82,11 @@
                                 <a href="./logIn.php">
                                     <span class="material-symbols-sharp unchecked">radio_button_unchecked</span>
                                     <span class="material-symbols-sharp checked">radio_button_checked</span>
-                                    <h4>detail</h4>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="./logIn.php">
-                                    <span class="material-symbols-sharp unchecked">radio_button_unchecked</span>
-                                    <span class="material-symbols-sharp checked">radio_button_checked</span>
-                                    <h4>detailgfhfxjdjtdyjtyd</h4>
+                                    <h4>order cart</h4>
                                 </a>
                             </li>
                             <li class="menu-item">
                                 <a href="./dashboad.html">
-                                    <span class="material-symbols-sharp unchecked">radio_button_unchecked</span>
-                                    <span class="material-symbols-sharp checked">radio_button_checked</span>
-                                    <h4>detail</h4>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="./logIn.php">
                                     <span class="material-symbols-sharp unchecked">radio_button_unchecked</span>
                                     <span class="material-symbols-sharp checked">radio_button_checked</span>
                                     <h4>detail</h4>
@@ -93,12 +105,6 @@
                             <span class="material-symbols-sharp">mail</span>
                             <h3>Messages</h3>
                             <span class="message-count">27</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./signIn.php" class="nav-link">
-                            <span class="material-symbols-sharp">inventory</span>
-                            <h3>Products</h3>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -165,56 +171,54 @@
 
     <script>
         $(document).ready(function () {
+            function ajaxSidebar(url) {
+                if (url != null) {
+                    $.ajax({
+                        url: url,
+                    })
+                        .done(function (response) {
+                            $("#main-page").empty().append(response);
+                        })
+                        .fail(function () {
+                            console.log("error");
+                        })
+                        .always(function () {
+                            console.log("completed");
+                        });
+                }
+            }
+
             $('.sidebar .nav-item .sub-btn').on('click', function () {
                 $(this).next('.sub-menu').slideToggle();
                 $(this).children('.more').toggle();
                 $(this).children('.less').toggle();
             });
-            $(".sidebar ul .nav-item").click(function () {
-                link = $(this).children('.nav-link').attr("href");
+
+            $(".sidebar ul .nav-item").click(function (e) {
+                e.preventDefault();
+                const link = $(this).children('.nav-link').attr("href");
+
                 $(this).siblings().removeClass("active");
                 $(this).addClass("active");
                 const hasSubBtn = $(this).children("div").hasClass("sub-btn");
-                const hasMenuItem = $('.sidebar .nav-item .sub-menu li').hasClass("active");
+                const hasMenuItem = $('.sidebar .menu-item').hasClass("active");
                 if (!hasSubBtn && hasMenuItem) {
-                    $('.sidebar .nav-item .sub-menu li').removeClass("active");
+                    $('.sidebar .menu-item').removeClass("active");
                 }
-                if (link != null) {
-                    $.ajax({
-                        url: link,
-                    })
-                        .done(function (response) {
-                            $("#main-page").empty().append(response);
-                        })
-                        .fail(function () {
-                            console.log("error");
-                        })
-                        .always(function () {
-                            console.log("completed");
-                        });
-                }
+                ajaxSidebar(link);
+                // click menu-item
+                $(".menu-item").on('click', function (e) {
+                    e.stopImmediatePropagation();
+                    const linkItem = $(this).children('a').attr("href");
+                    $(".menu-item").siblings().removeClass("active");
+                    $(this).addClass("active");
+                    ajaxSidebar(linkItem);
+                    return false;
+                });
+
                 return false;
             });
-            $(".sidebar .nav-item .sub-menu .menu-item").click(function () {
-                link = $(this).children('a').attr("href");
-                $(this).siblings().removeClass("active");
-                $(this).addClass("active");
-                if (link != null) {
-                    $.ajax({
-                        url: link,
-                    })
-                        .done(function (response) {
-                            $("#main-page").empty().append(response);
-                        })
-                        .fail(function () {
-                            console.log("error");
-                        })
-                        .always(function () {
-                            console.log("completed");
-                        });
-                }
-                return false;
-            });
+
         });
     </script>
     <script src="./admin.js"></script>
