@@ -23,9 +23,9 @@
                 }
         .form-box{
             position: relative;
-            width: 400px;
+            width: 530px;
             height: 450px;
-            background: rgba(240, 248, 255, 0.55);
+            background: rgba(240, 248, 255, 0.174);
             border-radius: 20px;
             backdrop-filter: blur(15px);
             display: flex;
@@ -33,23 +33,24 @@
             align-items: center;
         }
         .login-h2{
-            font-size: 2em;
-            color: black;
+            font-size: 2.1em;
+            color:  rgba(0, 0, 0, 0.588);
             text-align: center;
         }
         .inputbox{
             position: relative;
-            margin: 30px 0;
-            width: 310px;
-            border-bottom: 2px solid black;
+            margin: 35px 0;
+            width: 410px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.464);
         }
         .inputbox label{
             position: absolute;
             top: 50%;
             left: 5px;
             transform: translateY(-50%);
-            color:black;
-            font-size: 1em;
+            color:rgba(0, 0, 0, 0.806);
+            font-weight: 600;
+            font-size: 1.1em;
             pointer-events: none;
             transition: .5s;
         }
@@ -66,6 +67,13 @@
             font-size: 1em;
             padding: 0 35px 0 5px;
             color: black;
+        }
+        .inputbox ion-icon {
+            position: absolute;
+            right: 8px;
+            color: #000000d0;
+            font-size: 1.2em;
+            top: 20px;
         }
         .forget{
             margin: -15px 0 15px;
@@ -123,12 +131,14 @@
                 <form action="">
                     <h2 class="login-h2"> Đăng Nhập </h2>
                     <div class="inputbox">
-                        <input type="text" required>
-                        <label for="">Your Email : </label>
+                        <ion-icon name="mail"></ion-icon>
+                        <input type="text" required> 
+                        <label for=""> Email : </label>
                     </div>
                     <div class="inputbox">
+                        <ion-icon name="lock-closed"></ion-icon>
                         <input type="password" required>
-                        <label for=""> Your Password : </label>
+                        <label for=""> Password : </label>
                     </div>
                     <div class="forget">
                         <label for=""><input type="checkbox"> Remember me </label>
@@ -143,4 +153,6 @@
         </div>
     </section>
 </body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
