@@ -1,3 +1,15 @@
+<?php
+
+// Lấy danh sách các cookie
+$cookies = $_COOKIE;
+
+// Lặp qua danh sách và unset từng cookie
+foreach ($cookies as $cookie_name => $cookie_value) {
+  setcookie($cookie_name, '', time() - 3600);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -2708,12 +2720,12 @@
   <script>
     var owl = $('#owl-carousel');
     owl.owlCarousel({
-      items: 1,
-      loop: true,
-      // margin:10,
-      autoplay: true,
-      autoplayTimeout: 1500,
-      autoplayHoverPause: false
+    items:1,
+    loop:true,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:1500,
+    autoplayHoverPause:false
     });
   </script>
 </body>

@@ -1415,17 +1415,6 @@ footer ul li a:hover {
 }
 
 
-.owl-carousel > div {
-}
-
-.owl-carousel > div > img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-
-
 /* line 24, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_home.scss */
 /* line 25, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_home.scss */
 /* line 26, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_home.scss */
@@ -1686,7 +1675,7 @@ footer ul li a:hover {
 }
 /* line 1, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_slideshow.scss */
 .main-carousel {
-  max-height: 70vh;
+  max-height: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -1708,16 +1697,7 @@ footer ul li a:hover {
   transition: all 0.3s;
 }
 /* line 20, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_slideshow.scss */
-.main-carousel .owl-nav > div {
-  font-size: 30px;
-  color: #252a2b;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(255, 255, 255, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 /* line 30, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_slideshow.scss */
 .main-carousel .owl-nav .owl-prev {
   border-radius: 30px;
@@ -1731,29 +1711,14 @@ footer ul li a:hover {
 }
 /* line 42, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_slideshow.scss */
 /* line 43, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_slideshow.scss */
-.owl-nav .owl-prev {
-  width: 25px;
-  height: 25px;
-  border: 2px solid #333;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.owl-carousel .owl-item img{
-  max-height: 23rem;
+
+.owl-carousel div a img{
+  height: 35rem;
+  
 }
 /* line 54, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_slideshow.scss */
 /* line 55, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_slideshow.scss */
-.owl-nav .owl-next {
-  width: 25px;
-  height: 25px;
-  border: 2px solid #333;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 /* line 1, /home/thuhuong/domains/thuhuongbakery.com.vn/public_html/public/frontend/sass/_pagination.scss */
 .website-pagination {
   text-align: center;

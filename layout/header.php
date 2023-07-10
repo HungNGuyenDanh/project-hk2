@@ -44,12 +44,12 @@
         <div class="tab-pane fade pt-3 show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
           <ul class="mobile-menu-list">
             <li>
-              <a href="./index.html">
+              <a href="./index.php">
                 Trang chủ
               </a>
             </li>
             <li>
-              <a href="./aboutus.html">
+              <a href="./aboutus.php">
                 Giới thiệu
               </a>
             </li>
@@ -64,17 +64,17 @@
               </a>
             </li>
             <li>
-              <a href="./tin-tuc.html">
+              <a href="./tin-tuc.php">
                 Tin v&agrave; Sự Kiện
                 <i class="dropdown-button js-dropdown-button fas fa-caret-down"></i>
               </a>
               <ul class='submenu'>
-                <li><a href='./huong-dan-mua-hang.html.html'>Hướng dẫn mua hàng</a></li>
-                <li><a href='./tin-tuc.html'>Tin tức</a></li>
+                <li><a href='./huong-dan-mua-hang.php'>Hướng dẫn mua hàng</a></li>
+                <li><a href='./tin-tuc.php'>Tin tức</a></li>
               </ul>
             </li>
             <li>
-              <a href="./contactus.html">
+              <a href="./contactus.php">
                 Li&ecirc;n hệ
               </a>
             </li>
@@ -209,20 +209,20 @@
                   <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </a>
                 <ul class='submenu'>
-                  <li> <a href='./huong-dan-mua-hang.html'> banh sinh nhat</a></li>
-                  <li> <a href='./huong-dan-mua-hang.html'> banh sinh nhat</a></li>
-                  <li> <a href='./huong-dan-mua-hang.html'> banh sinh nhat</a></li>
-                  <li> <a href='./huong-dan-mua-hang.html'> banh sinh nhat</a></li>
-                  <li> <a href='./tin-tuc.html'> Tin tức&nbsp;&nbsp;</a></li>
+                  <li> <a href='./huong-dan-mua-hang.php'> banh sinh nhat</a></li>
+                  <li> <a href='./huong-dan-mua-hang.php'> banh sinh nhat</a></li>
+                  <li> <a href='./huong-dan-mua-hang.php'> banh sinh nhat</a></li>
+                  <li> <a href='./huong-dan-mua-hang.php'> banh sinh nhat</a></li>
+                  <li> <a href='./tin-tuc.php'> Tin tức&nbsp;&nbsp;</a></li>
                 </ul>
               </li>
               <li class="li-menu">
-                <a href="./index.html">
+                <a href="./index.php">
                   Trang chủ
                 </a>
               </li>
               <li class="li-menu">
-                <a href="./aboutus.html">
+                <a href="./aboutus.php">
                   Giới thiệu
                 </a>
               </li>
@@ -242,12 +242,12 @@
                   <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </a>
                 <ul class='submenu'>
-                  <li> <a href='./huong-dan-mua-hang.html'> Hướng dẫn mua hàng&nbsp;&nbsp;</a></li>
-                  <li> <a href='./tin-tuc.html'> Tin tức&nbsp;&nbsp;</a></li>
+                  <li> <a href='./huong-dan-mua-hang.php'> Hướng dẫn mua hàng&nbsp;&nbsp;</a></li>
+                  <li> <a href='./tin-tuc.php'> Tin tức&nbsp;&nbsp;</a></li>
                 </ul>
               </li>
               <li class="li-menu">
-                <a href="./contactus.html">
+                <a href="./contactus.php">
                   Li&ecirc;n hệ
                 </a>
               </li>
