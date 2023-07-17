@@ -21,13 +21,12 @@ if (isset($_POST["submit"]) && !empty($_POST["submit"])) {
     if(empty($errors["pass"])){
         //nếu như user đăng ký email mà đã đăng ký rồi thì báo lỗi
         $sql = "SELECT * FROM tbUsers WHERE email = '$email'";
-$result = executeSingleResult($sql);
-if ($result == null) {
-    $sql = "INSERT INTO tbUsers (email, password)
-    VALUES ('$email', '$password')";
-    execute($sql);
-    header("Location: login.php");
-    exit();  
+        $result = executeSingleResult($sql);
+        if ($result == null) {
+         $sql = "INSERT INTO tbUsers (email, password) VALUES ('$email', '$password')";
+         execute($sql);
+         header("Location: login.php");
+         exit();  
 } else {
     $errors["mail"] = "Email exists. Please enter another email or reset your password if you forgot!";
 }
