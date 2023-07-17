@@ -2,7 +2,7 @@
 $hostname='localhost';
 $usernamedb='root';
 $passworddb='';
-$database='projectHK2';
+$database='projecthk2';
 
 //su dung cho cau lenh select
 function executeResult($sql){
