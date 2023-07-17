@@ -25,7 +25,10 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
   <link rel="stylesheet" href="lightslider/dist/css/lightslider.css">
   <link rel="stylesheet" href="ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <!-- PLUGIN CSS -->
 
@@ -35,6 +38,124 @@
   <!-- End Meta Pixel Code -->
 
   </script>
+  <style>
+    .testimonial {
+      padding: 80px 0;
+    }
+
+    .sec-heading {
+      margin-bottom: 60px;
+    }
+
+    .sec-heading h6 {
+      font-weight: 900;
+      font-size: 50px;
+    }
+
+    .single-box {
+      border: 3px;
+      padding: 50px 30px 40px;
+      border-radius: 20px;
+      background: #fff;
+    }
+
+    .img-area {
+      margin: 45px 0 20px;
+    }
+
+    .single-box img {
+      max-width: 100px;
+      border-radius: 50%;
+      margin: 0 auto
+    }
+
+    .single-box h4 {
+      font-weight: 600;
+      margin: 0;
+      font-size: 35px;
+    }
+
+    .single-box {
+      overflow: hidden
+    }
+
+    .single-box .img-area {
+      width: 30%;
+      float: left;
+      margin: 0
+    }
+
+    .single-box .content {
+      width: 70%;
+      float: left;
+      padding-left: 10px
+    }
+
+    .single-box p {
+      margin: 10px 0 25px;
+      line-height: 2.3;
+    }
+
+    .testi-carousel-three .single-box {
+      border: 0;
+      padding: 0 50px;
+    }
+
+    .testi-carousel .owl-dots,
+    .clients-carousel .owl-dots,
+    .testi-carousel-three .owl-dots {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -60px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .testi-carousel .owl-dot,
+    .clients-carousel .owl-dot,
+    .testi-carousel-three .owl-dot {
+      width: 16px;
+      height: 16px;
+      background-color: #ddd;
+      display: inline-block;
+      margin: 0 6px;
+      text-align: center;
+      border-radius: 50%;
+    }
+
+    .testi-carousel .owl-dot.active,
+    .clients-carousel .owl-dot.active,
+    .testi-carousel-three .owl-dot.active {
+      background-color: #E487AF;
+    }
+
+    @media only screen and (min-width: 360px) and (max-width: 479px) {
+      .testimonial {
+        padding: 70px 0 130px;
+      }
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 359px) {
+      .testimonial {
+        padding: 70px 0 130px;
+      }
+
+      .single-box {
+        padding: 50px 0 40px;
+      }
+
+      .single-box .img-area {
+        width: 100%;
+        float: none;
+      }
+
+      .single-box .content {
+        width: 100%;
+        float: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -279,7 +400,7 @@
                 <ul class="nav nav-pills tabs-categories" role="tablist">
                   <li class="nav-item">
                     <a class="nav-link active" id="pills-home-tab-left" data-toggle="pill" href="#pills-home" role="tab"
-                      aria-controls="pills-home" aria-selected="true">Mô
+                      aria-controls="pills-home" aria-selected="true">mô
                       tả sản phẩm</a>
                   </li>
                   <li class="nav-item">
@@ -378,9 +499,106 @@
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
+      <section class="testimonial">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+              <div class="sec-heading text-center">
+                <h6>" Client's Says "</h6>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="clients-carousel owl-carousel">
+              <div class="single-box">
+                <div class="img-area"><img alt="" class="img-fluid"
+                    src="https://images.pexels.com/photos/3525908/pexels-photo-3525908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                </div>
+                <div class="content">
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, doloribus minima praesentium
+                    laborum ea earum."</p>
+                  <h4>Jason Doe</h4>
+                  <h6>Designation Here</h6>
+                </div>
+              </div>
+              <div class="single-box">
+                <div class="img-area"><img alt="" class="img-fluid"
+                    src="https://images.pexels.com/photos/5042302/pexels-photo-5042302.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                </div>
+                <div class="content">
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, doloribus minima praesentium
+                    laborum ea earum."</p>
+                  <h4>Dave Wood</h4>
+                  <h6>Designation Here</h6>
+                </div>
+              </div>
+              <div class="single-box">
+                <div class="img-area"><img alt="" class="img-fluid"
+                    src="https://images.pexels.com/photos/3211476/pexels-photo-3211476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                </div>
+                <div class="content">
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, doloribus minima praesentium
+                    laborum ea earum."</p>
+                  <h4>Matt Demon</h4>
+                  <h6>Designation Here</h6>
+                </div>
+              </div>
+              <div class="single-box">
+                <div class="img-area"><img alt="" class="img-fluid"
+                    src="https://images.pexels.com/photos/1270076/pexels-photo-1270076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                </div>
+                <div class="content">
+                  <span class="rating-star"><i class="icofont-star"></i><i class="icofont-star"></i><i
+                      class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i></span>
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, doloribus minima praesentium
+                    laborum ea earum."</p>
+                  <h4>jimmy kimmel</h4>
+                  <h6>Designation Here</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js">
+      </script>
+      <script>
+        $('.clients-carousel').owlCarousel({
+          loop: true,
+          nav: false,
+          autoplay: true,
+          autoplayTimeout: 5000,
+          animateOut: 'fadeOut',
+          animateIn: 'fadeIn',
+          smartSpeed: 450,
+          margin: 30,
+          responsive: {
+            0: {
+              items: 1
+            },
+            768: {
+              items: 2
+            },
+            991: {
+              items: 2
+            },
+            1200: {
+              items: 2
+            },
+            1920: {
+              items: 2
+            }
+          }
+        });
+      </script>
     </div>
   </section>
 
@@ -394,16 +612,56 @@
   <script src="public/frontend/assets/js/config.js"></script>
 
 
+  <script src="public/plugins/js/jquery3.3.1.min.js"></script>
   <script src="public/plugins/js/bootstrap4.min.js"></script>
   <script src="public/plugins/js/owl.carousel.min.js"></script>
   <script src="ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
   <script src="ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-
-
-
   <script src="public/frontend/assets/js/main.js?v=1.0.8"></script>
   <script src="public/myplugins/js/messagebox.js"></script>
+  <script src="public/frontend/assets/js/product_page.js"></script>
 
+
+  <script>
+    $(document).ready(function () {
+
+      $('.items').slick({
+        dots: true,
+        infinite: true,
+        speed: 800,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+
+        ]
+      });
+    });
+  </script>
 
   <script>
     var colors = [{ "id": null, "name": "17cm" }];
