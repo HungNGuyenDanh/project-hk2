@@ -149,8 +149,8 @@
   <header class="header">
     <div class="header-top" id="HeaderTop">
       <div class="container">
-        <span class="sologan float-left">Ch&agrave;o Mừng Qu&yacute; Kh&aacute;ch Đến Với em nhi Bakery</span>
-        <span class="sologan float-right">Hotline: 0999999999 | 0999999999</span>
+        <span class="sologan float-left">Em Nhi Best Cake Seller</span>
+        <span class="sologan float-right">Hotline: 9999999999 | 9999999999</span>
       </div>
     </div>
     <div class="header-topbar">
